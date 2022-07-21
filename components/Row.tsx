@@ -25,7 +25,7 @@ const Row = ({ title, movies }: Props) => {
     }
   };
 
-  console.log(isMoved)
+  
 
   return (
     <div className="h-40 space-y-0.5 md:space-y-2">
@@ -44,7 +44,7 @@ const Row = ({ title, movies }: Props) => {
         />
 
         {/* Thumbnails  */}
-        <div className="flex items-center scrollbar-hide space-x-0.5 overflow-x-scroll md:space-x-2.5 md:p-2" ref={rowRef}>
+        <div className="flex items-center scrollbar-hide space-x-2 overflow-x-scroll md:space-x-2.5 md:p-2" ref={rowRef}>
           {movies.map((movie) => (
             <Thumbnail key={movie.id} movie={movie} />
           ))}
